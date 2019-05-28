@@ -40,13 +40,13 @@ const Three = {
 
 const AsynsThree = () => ({
   component: import('./components/Three'),
-  loading: {
-    render: h => <h1>Loading....</h1>
-  },
+  // loading: {
+  //   render: h => <h1>Loading....</h1>
+  // },
   // timeout: 3000,
-  error: {
-    render: h => <h1 class="text-red-500">ERROR</h1>,
-  }
+  // error: {
+  //   render: h => <h1 class="text-red-500">ERROR</h1>,
+  // }
 })
 
 @Component({
