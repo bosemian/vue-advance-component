@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <main>
     <slot :header="header" :footer="footer"></slot>
-  </div>
+  </main>
 </template>
 <script>
 import Vue from 'vue'

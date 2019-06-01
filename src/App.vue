@@ -2,13 +2,15 @@
   <settings>
     <layout slot-scope="{header, footer}">
       <awesome-header slot="header" :header="header"></awesome-header>
-      <!-- <cats slot="content" :names="names" :num="4"></cats> -->
-      <div slot="content" class="flex-grow">
+      <cats slot="content" :names="names" :num="4"></cats>
+      <!-- <div slot="content" class="flex-grow">
         <select v-model="selectedComp">
           <option v-for="comp in comps" :value="comp" :key="comp.name">{{ comp.name }}</option>
         </select>
         <component :is="selectedComp"></component>
-      </div>
+      </div> -->
+      <!-- <awesome-content slot="content" :names="names" @handleClick="getName">
+      </awesome-content> -->
       <awesome-footer slot="footer" :footer="footer"></awesome-footer>
     </layout>
   </settings>
@@ -63,5 +65,9 @@ export default class App extends Vue {
   names = ["mindy", "john", "kim", "joel", "ben"]
   comps = [One, Two, AsynsThree]
   selectedComp = this.comps[0]
+
+  getName (v) {
+    console.log(v)
+  }
 }
 </script>

@@ -1,3 +1,5 @@
+import CatList from './CatList'
+
 const Selected = {
   props: {
     render: {
@@ -22,23 +24,11 @@ const Selected = {
   }
 }
 
-const CatList = {
-  functional: true,
-  render: (h, { props }) => (
-    <div>
-      {props.names
-        .map((name) => `https://robohash.org/${name}?set=set${props.num}`)
-        .map(((url, i) => <img 
-          class={props.selected == i ? 'bg-blue-500' : ''} 
-          src={url}
-          onClick={event => props.select(i)} />))
-      }
-    </div>
-  )
-}
-
 export default {
   functional: true,
+  components: {
+    CatList
+  },
   render: (h, { props }) => (
     <div class="flex flex-col items-center flex-grow p-4">
       <Selected render={({ selected, select }) => (
