@@ -9,7 +9,7 @@ export default {
           context.props.names.map((n) => {
             let handleClick = context.listeners.handleClick
             return (
-              <div onClick={event => context.listeners.handleClick(n)}>{ n }</div>
+              <div onClick={event => handleClick(n)}>{ n }</div>
             )
           })
         }
